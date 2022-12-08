@@ -2,7 +2,7 @@
   "name": "adventofcode-2022",
   "version": "1.0.0",
   "description": "Advent of code (2022)",
-  "main": "index.js",
+  "main": "/dist/day5.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
