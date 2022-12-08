@@ -1,0 +1,24 @@
+{
+  "name": "adventofcode-2022",
+  "version": "1.0.0",
+  "description": "Advent of code (2022)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ruben Deisenroth",
+  "license": "AGPL-3.0-or-later",
+  "dependencies": {
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^18.11.10",
+    "@types/ramda": "^0.28.20",
+    "fs": "^0.0.1-security",
+    "loadash": "^1.0.0",
+    "lodash": "^4.17.21",
+    "ramda": "^0.28.0"
+  },
+  "devDependencies": {
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.3"
+  }
+}

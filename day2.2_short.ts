@@ -1,0 +1,1 @@
+console.log(require('fs').readFileSync('a', 'utf-8').split(/\n/).map(x=>[[0,65],[2,88]].map(i=>x.charCodeAt(i[0])-i[1])).map(([a,b])=>(3+(a+b-1))%3+1+b*3).reduce((a,b)=>a+b))
