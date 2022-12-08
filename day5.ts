@@ -31,8 +31,8 @@ const stackFormat = stackString.pop()!;
 // do moves
 moves.forEach((move) => {
     var matches = /move (?<countStr>\d+) from (?<fromStr>\d+) to (?<toStr>\d+)/.exec(move);
-    if(!matches) return;
-    const {countStr, fromStr, toStr} = matches!.groups!
+    if(!matches?.groups) return;
+    const {countStr, fromStr, toStr} = matches.groups;
     const count = +countStr;
     const from = +fromStr;
     const to = +toStr;
