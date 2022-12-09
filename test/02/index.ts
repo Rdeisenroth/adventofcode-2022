@@ -1,14 +1,18 @@
-import { Day7 } from "./../../src/07/day7";
-const dayImpl = new Day7();
+import { Day2 } from "../../src/02/day2";
+const dayImpl = new Day2();
 dayImpl.inputPath = `data_test/day${dayImpl.day}.txt`
 
 describe(`testing day ${dayImpl.day}`, () => {
     test('test part 1', () => {
         const result = dayImpl.part1(dayImpl.input);
-        expect(result).toBe("95437");
+        expect(result).toBe("15");
     });
     test('test part 2', () => {
         const result = dayImpl.part2(dayImpl.input);
-        expect(result).toBe("24933642");
+        expect(result).toBe("12");
+    });
+    test('test short part 2', () => {
+        const result = dayImpl.part2Short(dayImpl.input);
+        expect(result).toBe("12");
     });
 });
