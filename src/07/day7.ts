@@ -114,3 +114,5 @@ export class Day7 extends AdventOfCodeDay {
         return bigDirectories.reduce((x, y) => x.size! < y.size! ? x : y).size!.toString();
     }
 }
+
+new Day7().run();
