@@ -4,6 +4,7 @@ export const year = 2022;
 export abstract class AdventOfCodeDay{
     abstract day: number;
     private _inputPath?: string;
+    public static runnable = true;
     get inputPath(): string {
         return this._inputPath ?? `data/day${this.day}.txt`;
     }
@@ -21,6 +22,9 @@ export abstract class AdventOfCodeDay{
     abstract part1(input: string): string;
     abstract part2(input: string): string;
     run() {
+        if (!AdventOfCodeDay.runnable) {
+            return;
+        }
         console.log(`Day ${this.day} part 1: ${this.part1(this.input)}`);
         console.log(`Day ${this.day} part 2: ${this.part2(this.input)}`);
     }
