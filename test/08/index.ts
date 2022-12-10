@@ -25,8 +25,8 @@ describe(`testing day ${dayImpl.day}`, () => {
         const result = dayImpl.part1(dayImpl.input);
         expect(result).toBe("21");
     });
-    // test('test part 2', () => {
-    //     const result = dayImpl.part2(dayImpl.input);
-    //     expect(result).toBe("24933642");
-    // });
+    test('test part 2', () => {
+        const result = dayImpl.part2(dayImpl.input);
+        expect(result).toBe("8");
+    });
 });

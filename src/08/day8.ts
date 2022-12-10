@@ -67,6 +67,25 @@ export class Day8 extends AdventOfCodeDay{
         }
         return visibleCoordinates;
     }
+    scenicScore(x:number, y:number,grid:number[][]){
+        var height = grid[y][x];
+        var distances = [] as number[];
+        for (const dir of directions) {
+            var distance = 0;
+            let x1 = x + dir.x;
+            let y1 = y + dir.y;
+            while (this.isInBounds(x1, y1, grid)) {
+                distance++;
+                if(grid[y1][x1] >= height) {
+                    break;
+                }
+                x1 += dir.x;
+                y1 += dir.y;
+            }
+            distances.push(distance);
+        }
+        return distances.reduce((a, b) => a * b, 1);
+    }
     part1(input: string): string {
         var visibilityMap = this.visibilityMap(input);
         console.log(visibilityMap);
@@ -75,7 +94,9 @@ export class Day8 extends AdventOfCodeDay{
         return visibilityMap.reduce((a, b) => a + +b.reduce((c, d) => c + +d, 0), 0).toString();
     }
     part2(input: string): string {
-        return "";
+        // find the tree with the highest scenic score
+        var grid: number[][] = input.split(/\n/).map(x => x.split('').map(y => +y));
+        return grid.map((row, y) => row.map((col, x) => this.scenicScore(x, y, grid))).reduce((a, b) => a.concat(b)).reduce((a, b) => Math.max(a, b)).toString();
     }
 
 }
