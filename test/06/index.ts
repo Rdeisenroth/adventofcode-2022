@@ -1,4 +1,7 @@
-import { Day6 } from "../../src/06/day6";
+import { AdventOfCodeDay } from "../../src/util/util";
+// disable running the actual code
+AdventOfCodeDay.runnable = false;
+import { Day6 } from "./../../src/06/day6";
 const dayImpl = new Day6();
 dayImpl.inputPath = `data_test/day${dayImpl.day}.txt`
 
