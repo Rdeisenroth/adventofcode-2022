@@ -26,8 +26,8 @@ export abstract class AdventOfCodeDay {
         if (!AdventOfCodeDay.runnable) {
             return;
         }
-        console.log(`Day ${this.day} part 1: ${this.part1(this.input)}`);
-        console.log(`Day ${this.day} part 2: ${this.part2(this.input)}`);
+        console.log(`----Day ${this.day} part 1---- \n${this.part1(this.input)}`);
+        console.log(`----Day ${this.day} part 2---- \n${this.part2(this.input)}`);
     }
     testRun() {
         this.inputPath = `data_test/day${this.day}.txt`;
