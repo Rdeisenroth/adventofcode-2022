@@ -41,7 +41,7 @@ export class Day10 extends AdventOfCodeDay {
         const display_height=6;
         const sprite_width=3;
         const halfSpriteWidth = Math.floor(sprite_width/2);
-        const display: boolean[][] = new Array(display_height).fill(undefined).map(_ => new Array(display_width).fill(false));
+        const display: boolean[][] = new Array(display_height).fill(null).map(_ => new Array(display_width).fill(false));
         for(const [i,c] of cycles.entries()){
             const row = Math.floor(i/display_width) % display_height;
             const col = i%display_width;
