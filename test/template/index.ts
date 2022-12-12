@@ -7,7 +7,7 @@ dayImpl.inputPath = `data_test/day${dayImpl.day}.txt`
 
 describe(`testing day ${dayImpl.day}`, () => {
     test('test part 1', () => {
-        // const result = dayImpl.part2(dayImpl.input);
+        // const result = dayImpl.part1(dayImpl.input);
         // expect(result).toBe("1");
         expect(() => dayImpl.part1(dayImpl.input)).toThrowError("Method not implemented.");
     });
