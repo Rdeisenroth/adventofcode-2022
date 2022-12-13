@@ -28,14 +28,13 @@ export class Day12 extends AdventOfCodeDay {
     }
     MinAmountOfStepsFrom(heightMap: number[][], start: { x: number, y: number }, end: { x: number, y: number }): number {
         let queue: { x: number, y: number, steps: number }[] = [{ x: start.x, y: start.y, steps: 0 }];
-        let visited: { [key: string]: boolean } = {};
+        let visited: { x: number, y: number }[] = [];
         while (queue.length > 0) {
             const { x, y, steps } = queue.shift()!;
-            const key = `${x},${y}`;
-            if (visited[key]) {
+            if (visited.some(v => v.x === x && v.y === y)) {
                 continue;
             }
-            visited[key] = true;
+            visited.push({ x, y });
             if (x === end.x && y === end.y) {
                 return steps;
             }
